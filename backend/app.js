@@ -1,4 +1,5 @@
 const express = require("express");
+require("dotenv").config();
 const bodyParser = require("body-parser");
 const placesRoutes = require("./routes/places-routes");
 const userRoutes = require("./routes/users-routes");
@@ -26,7 +27,7 @@ app.use((error, req, res, next) => {
 });
 mongoose
   .connect(
-    "mongodb+srv://Kisoi:reactPratice@reactnodepratice1.qvjxvrg.mongodb.net/?retryWrites=true&w=majority"
+    `mongodb+srv://${process.env.URLK}:${process.env.URLP}@${process.env.URL}/?retryWrites=true&w=majority`
   )
   .then(() => {
     app.listen(5000);
