@@ -7,7 +7,7 @@ const Button = (props) => {
   if (props.href) {
     return (
       <a
-        className={`button button--${props.size || "default"} ${
+        className={`button button-- ${props.size || "default"} ${
           props.inverse && "button--inverse"
         } ${props.danger && "button--danger"}`}
         href={props.href}
