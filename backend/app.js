@@ -47,7 +47,7 @@ app.use((error, req, res, next) => {
 });
 mongoose
   .connect(
-    `mongodb+srv://${process.env.URLK}:${process.env.URLP}@${process.env.URL}/mern?retryWrites=true&w=majority`
+    `mongodb+srv://${process.env.URLK}:${process.env.URLP}@${process.env.URL}/${process.env.folder}?retryWrites=true&w=majority`
   )
   .then(() => {
     app.listen(5000);
